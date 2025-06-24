@@ -40,3 +40,9 @@ export async function deleteTask(id: number): Promise<void> {
   }
 }
 
+export async function deleteCompletedTasks(): Promise<void> {
+  const res = await fetch(`${BASE}/completed`, {
+    method: 'DELETE'
+  });
+  if (!res.ok) throw new Error('Error al borrar tareas completadas');
+}

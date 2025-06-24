@@ -35,6 +35,9 @@ div{
   width: 100%;
   text-align: center;
   align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 2em;
 }
 
@@ -54,6 +57,16 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+button.delete {
+  background-color: #d32f2f;
+  color: white;
+}
+button.delete:hover {
+  background-color: #b71c1c;
+  border-color: #ff8a80;
+}
+
 button:hover {
   border-color: #646cff;
 }

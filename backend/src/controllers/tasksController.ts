@@ -11,10 +11,12 @@ let tasks: Task[] = [
   { id: 1, title: 'Completar y eliminar esta tarea', completed: false }
 ];
 
+// GET /api/tasks
 export function getTasks(req: Request, res: Response , next: NextFunction):void {
   res.json(tasks);
 }
 
+// POST /api/tasks
 export function createTask(req: Request, res: Response , next: NextFunction):void  {
   const { title } = req.body;
   const newTask: Task = {
@@ -66,4 +68,16 @@ export function updateTask(
 
   res.json(task);
 }
+
+// DELETE /api/tasks/completed
+export function deleteCompletedTasks(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): void {
+  const before = tasks.length;
+  tasks = tasks.filter(t => !t.completed);
+  const removed = before - tasks.length;
+  res.status(200).json({ removed });
+};
 
