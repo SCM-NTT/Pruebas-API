@@ -11,7 +11,7 @@ Este proyecto se va a centrar en desarrollar una API y en su integración en un 
             tasksController.ts  (genera las tareas a completar)
         
         routes
-            tasks.ts    ( tratamiento de tareas)
+            tasks.ts    (tratamiento de tareas)
         
         index.tx    (Punto de acceso al Back-end)
 
@@ -24,7 +24,7 @@ Este proyecto se va a centrar en desarrollar una API y en su integración en un 
             TaskForm.tsx (formulario de envío de tarea)
             TaskList.tsx (lista de tareas completables y borrables)
         
-        services (servicios )
+        services (servicios)
             tasks.ts (llamadas a  back-end para tratamiento de tareas )
         
         types (interfaces para el tratamiento de objetos)
