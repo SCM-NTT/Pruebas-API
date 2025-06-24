@@ -1,0 +1,47 @@
+# Node dependencies
+**/node_modules/
+
+# Build generated files
+dist
+lib
+release
+solution
+temp
+*.sppkg
+.heft
+
+# Logs y debugging
+*.log
+**/*.log
+npm-debug.log*
+
+# .env (variables sensibles)
+**/.env*
+
+# IDE/editor config
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vite
+frontend/.vite/
+
+# TypeScript
+**/*.tsbuildinfo
+
+# Visual Studio files
+.ntvs_analysis.dat
+.vs
+bin
+obj
+
+# Resx Generated Code
+*.resx.ts
+
+# Styles Generated Code
+*.scss.ts
