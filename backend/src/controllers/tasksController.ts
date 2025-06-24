@@ -8,7 +8,7 @@ interface Task {
 }
 
 let tasks: Task[] = [
-  { id: 1, title: 'Aprender Node.js', completed: false }
+  { id: 1, title: 'Completar y eliminar esta tarea', completed: false }
 ];
 
 export function getTasks(req: Request, res: Response , next: NextFunction):void {

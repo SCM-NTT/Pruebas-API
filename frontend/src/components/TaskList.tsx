@@ -42,15 +42,17 @@ export default function TaskList() {
     <ul>
       {tasks.map(t => (
         <li key={t.id} style={{ display: 'flex', alignItems: 'center' }}>
+          {t.completed ? '✅' : '❌'}
           <span
             onClick={() => toggleTask(t)}
             style={{
               flex: 1,
               cursor: 'pointer',
-              textDecoration: t.completed ? 'line-through' : 'none'
+              textDecoration: t.completed ? 'line-through' : 'none',
+              fontWeight: t.completed ? 'normal' : 'bold',
             }}
-          >
-            {t.title}
+            >
+            {t.title} 
           </span>
           <button
             onClick={() => handleDelete(t.id)}
