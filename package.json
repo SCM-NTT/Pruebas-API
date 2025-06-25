@@ -1,0 +1,26 @@
+{
+  "name": "pruebas-api",
+  "version": "1.0.0",
+  "description": "Este proyecto se va a centrar en desarrollar una API y en su integración en un proyecto web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run dev_ui\" \"npm run dev_api\"",
+    "dev_ui": "cd ./frontend && npm run dev",
+    "dev_api": "cd ./backend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCM-NTT/Pruebas-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SCM-NTT/Pruebas-API/issues"
+  },
+  "homepage": "https://github.com/SCM-NTT/Pruebas-API#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
