@@ -38,7 +38,6 @@ div{
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 2em;
 }
 
 div.lista {
@@ -49,7 +48,7 @@ div.lista {
   align-items: center;
   display: flex;
   flex-direction: row;
-  padding: 2em;
+  padding: 1em;
 }
 
 h1 {
@@ -100,6 +99,8 @@ button:focus-visible {
 span {
   font-size: 1.2em;
   line-height: 1.5;
+  flex: 1;
+  cursor: 'pointer';
 }
 
 

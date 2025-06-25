@@ -110,6 +110,7 @@ export default function TaskList() {
           }}>
             Mover tareas completadas a finalizadas ➡️
           </button>
+          <br />
           <ul>
             {tasks.map(t => (
               <li key={t.id} className='lista_tareas'>
@@ -117,8 +118,6 @@ export default function TaskList() {
                 <span
                   onClick={() => toggleTask(t)}
                   style={{
-                    flex: 1,
-                    cursor: 'pointer',
                     fontWeight: t.completed ? 'normal' : 'bold',
                     color: t.completed ? 'green' : 'white'
                   }}
@@ -140,6 +139,7 @@ export default function TaskList() {
               </li>
             ))}
           </ul>
+          <br />
           <button className='delete' type='submit' onClick={async () => {
             const confirm = window.confirm('¿Estás seguro de que quieres borrar todas las tareas completadas en vez de pasarlas a finalizadas?');
             if (!confirm) return;
@@ -168,7 +168,7 @@ export default function TaskList() {
           }}>
             ⬅️ Mover tareas incompletas a tareas
           </button>
-
+          <br />
           <ul>
             {finishedTasks.map(t => (
               <li key={t.id} className='lista_tareas'>
@@ -181,8 +181,6 @@ export default function TaskList() {
                 <span
                   onClick={() => toggleFinishedTask(t)}
                   style={{
-                    flex: 1,
-                    cursor: 'pointer',
                     fontWeight: t.completed ? 'bold' : 'normal',
                     color: t.completed ? 'green' : 'red'
                   }}
@@ -199,6 +197,7 @@ export default function TaskList() {
               </li>
             ))}
           </ul>
+          <br />
           <button className='delete' type='submit' onClick={async () => {
             const confirm = window.confirm('¿Estás seguro de que quieres borrar todas las tareas finalizadas?');
             if (!confirm) return;
