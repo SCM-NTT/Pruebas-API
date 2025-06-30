@@ -1,6 +1,7 @@
 import type { Task } from '../types/Task'
 
-const BASE = 'http://localhost:5000/api/tasks'
+//const BASE = 'http://localhost:<puerto del backend>/api/tasks'
+const BASE = import.meta.env.VITE_BACK_PORT
 
 export async function fetchTasks(): Promise<Task[]> {
   const res = await fetch(BASE)
