@@ -16,7 +16,7 @@ temp
 npm-debug.log*
 
 # .env (variables sensibles)
-**/.env*
+**/.env
 
 # IDE/editor config
 .vscode/
