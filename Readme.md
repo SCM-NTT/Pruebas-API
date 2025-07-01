@@ -8,10 +8,10 @@ Este proyecto se va a centrar en desarrollar una API y en su integración en un 
     src
         
         controllers
-            tasksController.ts  (genera las tareas a completar)
+            tasksController.ts  (Realiza la gestión de las tareas)
         
         routes
-            tasks.ts    (tratamiento de tareas)
+            tasks.ts    (Peticiones para el tratamiento de tareas)
         
         index.tx    (Punto de acceso al Back-end)
 
