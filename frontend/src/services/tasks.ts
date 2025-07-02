@@ -1,7 +1,19 @@
-import type { Task } from '../types/Task'
+import { getToken } from "./authService";
+import type { Task } from "../types/Task";
 
-//const BASE = 'http://localhost:<puerto del backend>/api/tasks'
-const BASE = import.meta.env.VITE_BACK_PORT
+const BASE = import.meta.env.VITE_BACK_URI+ "/api/tasks"; 
+
+// Ejemplo: usuario logueado
+export async function fetchUserData() {
+  const token = await getToken();
+  const res = await fetch('', {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+
+  if (!res.ok) throw new Error("Error cargando datos de usuario");
+  
+  return res.json();
+}
 
 export async function fetchTasks(): Promise<Task[]> {
   const res = await fetch(BASE)
